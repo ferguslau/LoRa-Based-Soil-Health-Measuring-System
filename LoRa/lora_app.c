@@ -473,9 +473,8 @@ static void SendTxData(void)
     CayenneLppCopy(AppData.Buffer);
     AppData.BufferSize = CayenneLppGetSize();
 #else  // not CAYENNE_LPP  //Enter here
-    //convertHumidityAndTemp(ReadTemperatureSensor());
-    //AppData.Buffer[i++] = temperatureC;
-    AppData.Buffer[i++] = 0;
+    convertHumidityAndTemp(ReadTemperatureSensor());
+    AppData.Buffer[i++] = temperatureC;
 
 
 
